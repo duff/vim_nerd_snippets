@@ -1,4 +1,4 @@
-desc "Replace the snippets directorie in ~/.vim/snippets with these snippets"
+desc "Replace the snippets directory in ~/.vim/snippets with these snippets"
 task :deploy_local do
   run "rm -rf ~/.vim/snippets"
   run "mkdir ~/.vim/snippets"
