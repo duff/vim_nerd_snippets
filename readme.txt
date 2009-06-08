@@ -11,13 +11,14 @@ To use these snippets, you have to tell NERD snippets about them. The easiest wa
 Call the file whatever you want, but its important to stick it in the after/plugin directory.  This setup file could look something like the following:
 
 
-call NERDSnippetsReset()
-source ~/.vim/snippets/support_functions.vim
-call NERDSnippetsFromDirectory("~/.vim/snippets")
+  call NERDSnippetsReset()
+  source ~/.vim/snippets/support_functions.vim
+  call NERDSnippetsFromDirectory("~/.vim/snippets")
 
-"use our html snippets for eruby and xhtml too
-call NERDSnippetsFromDirectoryForFiletype('~/.vim/snippets/ruby-rails', 'ruby')
-call NERDSnippetsFromDirectoryForFiletype('~/.vim/snippets/eruby-rails', 'eruby')
-call NERDSnippetsFromDirectoryForFiletype('~/.vim/snippets/html', 'eruby')
+  "use our html snippets for eruby and xhtml too
+  call NERDSnippetsFromDirectoryForFiletype('~/.vim/snippets/ruby-rails', 'ruby')
+  call NERDSnippetsFromDirectoryForFiletype('~/.vim/snippets/eruby-rails', 'eruby')
+  call NERDSnippetsFromDirectoryForFiletype('~/.vim/snippets/html', 'eruby')
 
 
+There's a Rakefile that can help you install the snippets locally into your snippets directory.
