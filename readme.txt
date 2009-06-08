@@ -1,11 +1,23 @@
-This repo contains a collection of snippets to use with the NERD snippets
-plugin (http://github.com/scrooloose/nerdsnippets).
+This repo contains a collection of NERD snippets. (http://github.com/scrooloose/nerdsnippets).
 
 It contains:
 * my personal snippets
-* all the rails related snippets converted from textmate by Fabio Akita (http://github.com/akitaonrails)
-* a bunch of python and php snippets by Gavin Gilmour (http://github.com/gaving)
+* many of the snippets from scrooloose. (http://github.com/scrooloose/snippets)
+* some of the rails related snippets converted from textmate by Fabio Akita (http://github.com/akitaonrails)
 
-support_functions.vim contains functions that are called from some of the
-snippets. This file should be sourced somewhere like your vimrc or the same
-place you do the rest of your snippet setup.
+To use these snippets, you have to tell NERD snippets about them. The easiest way to do this is to create a snippet setup file here: 
+    ~/.vim/after/plugin/snippet_setup.vim
+
+Call the file whatever you want, but its important to stick it in the after/plugin directory.  This setup file could look something like the following:
+
+
+call NERDSnippetsReset()
+source ~/.vim/snippets/support_functions.vim
+call NERDSnippetsFromDirectory("~/.vim/snippets")
+
+"use our html snippets for eruby and xhtml too
+call NERDSnippetsFromDirectoryForFiletype('~/.vim/snippets/ruby-rails', 'ruby')
+call NERDSnippetsFromDirectoryForFiletype('~/.vim/snippets/eruby-rails', 'eruby')
+call NERDSnippetsFromDirectoryForFiletype('~/.vim/snippets/html', 'eruby')
+
+
