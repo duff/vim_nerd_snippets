@@ -12,6 +12,7 @@ task :deploy_local do
   run "cp -r ruby-rails ~/.vim/snippets"
   run "cp -r ruby-rails-rjs ~/.vim/snippets"
   run "cp -r vim ~/.vim/snippets"
+  run "cp -r cucumber ~/.vim/snippets"
   run "cp support_functions.vim ~/.vim/snippets"
 end
 
